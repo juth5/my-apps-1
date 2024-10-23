@@ -16,22 +16,16 @@
 		{
 			text: 'JavaScript',
 			description: '基本から実践までを学ぶ',
-			image1: '/src/lib/images/html1.png',
-			image2: '/src/lib/images/html3.png',
+			image1: '/src/lib/images/js2.png',
+			image2: '/src/lib/images/js1.png',
 			borderColor: 'yellow',
 		},
 		{
 			text: 'Git (バージョン管理)',
 			description: '共同開発の方法を学ぶ',
-			image1: '/src/lib/images/html1.png',
-			image2: '/src/lib/images/html3.png',
+			image1: '/src/lib/images/git1.png',
+			image2: '/src/lib/images/git2.png',
 			borderColor: 'red',
-		},
-		{
-			text: 'データベース',
-			description: 'データベースの活用方法を学ぶ',
-			image1: '/src/lib/images/html1.png',
-			image2: '/src/lib/images/html3.png',
 		},
 	];
 
@@ -51,7 +45,7 @@
 				div.fs48 プログラミングを学ぼう
 				div.fs28 わかりやすく実践的なカリキュラム
 	div.text-center
-		div.my40
+		div.my60
 			Title(title='カリキュラム')
 		+each('contentData as data')
 			div.f.fc.mb70
