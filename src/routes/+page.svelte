@@ -39,7 +39,7 @@
 <template lang='pug'>
 	div.relative.h80vh
 		div.absolute.trbl0.s-full
-			img.object-fit-cover.s-full.filter(src='/src/lib/images/Frame 1.png')
+			img.object-fit-cover.s-full.filter(src='/src/lib/images/Frame1.png')
 		div.absolute.trbl0.z10.f.fh
 			h1.text-white
 				div.fs48 プログラミングを学ぼう
