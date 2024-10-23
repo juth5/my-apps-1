@@ -10,13 +10,17 @@
 
 <template lang='pug'>
 	div
-		div.py12
+		div.mb30
+			div.text-center.mb10
+				h3(class="border-{item.borderColor}").fs28.border-bottom.inline-block.bw4 {item.text}
 			div.text-center
-				h2.fs28 {item.text}
-			div.text-center
-				h3.fs18 {item.description}
-		div.w1200
-			img.block.w-full.object-fit-cover.rounded-4(src='{item.image}')
+				h4.fs18 {item.description}
+		div.f.fm
+			div.h400.mr24
+				img.block.s-full.object-fit-cover.rounded-10(src='{item.image1}')
+			div.h400
+				img.block.s-full.object-fit-cover.rounded-10(src='{item.image2}')
+
 	
 </template>
 

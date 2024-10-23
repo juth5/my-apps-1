@@ -3,27 +3,35 @@
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import Content from './Content.svelte';
+	import Title from '../components/items/Title.svelte';
 
 	let contentData = [
 		{
 			text: 'HTML,CSS',
-			description: 'トレースによるトレンドのレイアウト方法を学ぶ',
-			image: '/src/lib/images/html.png',
+			description: 'トレースによるトレンドのレイアウトを学ぶ',
+			image1: '/src/lib/images/html1.png',
+			image2: '/src/lib/images/html3.png',
+			borderColor: 'orange',
 		},
 		{
 			text: 'JavaScript',
 			description: '基本から実践までを学ぶ',
-			image: '/src/lib/images/html.png',
+			image1: '/src/lib/images/html1.png',
+			image2: '/src/lib/images/html3.png',
+			borderColor: 'yellow',
 		},
 		{
 			text: 'Git (バージョン管理)',
 			description: '共同開発の方法を学ぶ',
-			image: '/src/lib/images/html.png',
+			image1: '/src/lib/images/html1.png',
+			image2: '/src/lib/images/html3.png',
+			borderColor: 'red',
 		},
 		{
 			text: 'データベース',
 			description: 'データベースの活用方法を学ぶ',
-			image: '/src/lib/images/html.png',
+			image1: '/src/lib/images/html1.png',
+			image2: '/src/lib/images/html3.png',
 		},
 	];
 
@@ -42,9 +50,11 @@
 			h1.text-white
 				div.fs48 プログラミングを学ぼう
 				div.fs28 わかりやすく実践的なカリキュラム
-	div
+	div.text-center
+		div.my40
+			Title(title='カリキュラム')
 		+each('contentData as data')
-			div.f.fc.py24
+			div.f.fc.mb70
 				Content(item='{data}')
 </template>
 <style>
