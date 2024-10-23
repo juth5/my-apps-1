@@ -9,22 +9,22 @@
 		{
 			text: 'HTML,CSS',
 			description: 'トレースによるトレンドのレイアウトを学ぶ',
-			image1: '/src/lib/images/html1.png',
-			image2: '/src/lib/images/html3.png',
+			image1: '/html1.png',
+			image2: '/html3.png',
 			borderColor: 'orange',
 		},
 		{
 			text: 'JavaScript',
 			description: '基本から実践までを学ぶ',
-			image1: '/src/lib/images/js2.png',
-			image2: '/src/lib/images/js1.png',
+			image1: '/js1.png',
+			image2: '/js2.png',
 			borderColor: 'yellow',
 		},
 		{
 			text: 'Git (バージョン管理)',
 			description: '共同開発の方法を学ぶ',
-			image1: '/src/lib/images/git1.png',
-			image2: '/src/lib/images/git2.png',
+			image1: '/git1.png',
+			image2: '/git2.png',
 			borderColor: 'red',
 		},
 	];
@@ -39,7 +39,7 @@
 <template lang='pug'>
 	div.relative.h80vh
 		div.absolute.trbl0.s-full
-			img.object-fit-cover.s-full.filter(src='/src/lib/images/top.png')
+			img.object-fit-cover.s-full.filter(src='/top.png')
 		div.absolute.trbl0.z10.f.fh
 			h1.text-white
 				div.fs48 プログラミングを学ぼう
