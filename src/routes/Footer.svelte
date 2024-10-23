@@ -5,12 +5,7 @@
 </script>
 
 <template lang='pug'>
-	header.fixed.t0.l0.z100.w-full.bg-black
-		div.f.fm.fbw.h80.px20.text-white.fs16
-			div プログラミング
-			div.f
-				a.mr24(href='/') 詳細
-				a(href='/') お問い合わせ
+	div aaaaaaaa
 </template>
 
 
