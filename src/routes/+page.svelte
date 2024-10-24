@@ -46,18 +46,29 @@
 			h1.text-white
 				div.fs48.s-fs24 プログラミングを学ぼう
 				div.fs28.s-fs14 わかりやすく実践的なカリキュラム
-	div.text-center
+	div.w-full.text-center
 		div.mb50.s-mb40
 			Title(title='カリキュラム')
 		+each('contentData as data')
 			div.f.fc.mb50.s-mb50
 				Content(item='{data}')
-		div.bg-dark-green.pb30.pt30
+		div.mb40
+			a.w300.inline-block.py14.bg-orange.rounded-full.text-white(href='/') 詳しく見る
+		div.bg-dark-green.pb40.pt40.mb30
 			div.mb50.s-mb40
 				Title(title='プラン', color='white')
-			div.f.fc.w-full
-				div.w500
+			div.f.fc.w-full.mb50
+				div.w500.s-px20
 					Plan
+			div
+				a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='/') 詳しく見る
+		div
+			div.mb50.s-mb40
+				Title(title='お問い合わせ')
+			div.mb50 無料体験へのご参加お待ちしております。お気軽にご参加ください!
+			a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='/') 詳しく見る
+
+
 </template>
 <style>
 	.filter {

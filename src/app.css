@@ -115,9 +115,13 @@ button:focus:not(:focus-visible) {
 .pale-gray {
 	color: rgba(84,97,122,.6)!important
 }
-.dark-green {
+.text-dark-green {
 	color: #2b546a;
 }
 .bg-dark-green {
 	background-color: #2b546a;
+}
+
+.bg-base {
+	background-color: hsl(209, 36%, 86%);
 }
