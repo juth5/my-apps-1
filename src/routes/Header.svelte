@@ -5,11 +5,11 @@
 	let headerItems = [
 		{
 			label: 'カリキュラム',
-			link: '/',
+			link: '/curriculum',
 		},
 		{
 			label: 'プラン',
-			link: '/',
+			link: '/plan',
 		},
 		{
 			label: 'お問い合わせ',
@@ -21,7 +21,7 @@
 <template lang='pug'>
 	header.fixed.t0.l0.z100.w-full.bg-black
 		div.f.fm.fbw.h80.px20.text-white.fs16.s-fs14
-			div プログラミング
+			a(href='/') プログラミング
 			div
 				+each('headerItems as item')
 					a.mr24.mr0-last(href='{item.link}') {item.label}

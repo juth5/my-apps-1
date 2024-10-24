@@ -50,7 +50,7 @@
 		div.mb50.s-mb40
 			Title(title='カリキュラム')
 		+each('contentData as data')
-			div.f.fc.mb50.s-mb50
+			div.f.fc.mb50.s-mb50.s-px16
 				Content(item='{data}')
 		div.mb40
 			a.w300.inline-block.py14.bg-orange.rounded-full.text-white(href='/') 詳しく見る
@@ -62,10 +62,10 @@
 					Plan
 			div
 				a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='/') 詳しく見る
-		div
+		div.mb80
 			div.mb50.s-mb40
 				Title(title='お問い合わせ')
-			div.mb50 無料体験へのご参加お待ちしております。お気軽にご参加ください!
+			div.s-px16.mb50 無料体験へのご参加お待ちしております。お気軽にご参加ください!
 			a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='/') 詳しく見る
 
 
