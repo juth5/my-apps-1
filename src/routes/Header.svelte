@@ -20,7 +20,7 @@
 
 <template lang='pug'>
 	header.fixed.t0.l0.z100.w-full.bg-black
-		div.f.fm.fbw.h80.px20.text-white.fs16
+		div.f.fm.fbw.h80.px20.text-white.fs16.s-fs14
 			div プログラミング
 			div
 				+each('headerItems as item')
