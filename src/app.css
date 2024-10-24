@@ -105,3 +105,19 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
+
+.pale-yellow {
+	color: #FFEDB3;
+}
+.bg-pale-yellow {
+	background-color: #FFEDB3;
+}
+.pale-gray {
+	color: rgba(84,97,122,.6)!important
+}
+.dark-green {
+	color: #2b546a;
+}
+.bg-dark-green {
+	background-color: #2b546a;
+}
