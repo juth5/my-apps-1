@@ -32,7 +32,7 @@
 </svelte:head>
 <template lang='pug'>
 
-	div.w-full.mt100
+	div.w-full.mt100.s-px16
     div.container-1024
       div.mb40.s-mb20
         div.mb20.s-mb10

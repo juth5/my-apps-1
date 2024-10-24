@@ -61,7 +61,7 @@
 				div.w500.s-px20
 					Plan
 			div
-				a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='/') 詳しく見る
+				a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='/curriculum') 詳しく見る
 		div.mb80
 			div.mb50.s-mb40
 				Title(title='お問い合わせ')
