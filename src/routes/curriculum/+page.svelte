@@ -35,28 +35,29 @@
 	div.w-full.mt100.s-px16
     div.container-1024
       div.mb40.s-mb20
-        div.mb20.s-mb10
-          Title(title='学習について')
-        div 福岡市内(博多、天神)のコワーキングスペースに集まり学習を行います。
-        div 学習の初めのつまずきなどの苦しいステージを支えながら自走できるエンジニアの育成を目指します。
+        div.text-center.mb20.s-mb10
+          Title(title='スタンダートプランの特徴')
+        div.lh18 対面による学習。福岡市内(博多、天神)のコワーキングスペースで学習を行います。つまずきの多い初学者の段階は対面の方が効率よく、テンポよく学習を進められると考えています。↓画像載せてみる
+        div.lh18 実践的な学習プラン。初学者の学習コストを最小限に抑え、最も効率的な方法で必要なスキルを身につけることを重視し学習内容を厳選しています。Web開発に必要な知識を習得し、早期に自学自走できる段階まで駆け抜けます。
+        div.lh18 チームによる開発を意識。プログラミングを学ぶだけでなくGitのバージョン管理、プルリクエストの作成方法などを学びチーム開発の現場で役立つノウハウを学びます。
         br|
         div.mb20 Web開発に必要な以下の項目を学習します。
         ul 
           +each('listData as list')
             li.ml20 {list}
       div.mb40.s-mb20
-        div.mb20.s-mb10
+        div.text-center.mb20.s-mb10
           Title(title='HTML, CSSの学習内容の一部を紹介')
         ul
           +each('htmlCssList as list')
-            li.ml20
+            li.lh18.ml20
               a(href='{list.link}') {list.label}
       div.mb40.s-mb20
-        div.mb20.s-mb10
+        div.text-center.mb20.s-mb10
           Title(title='JavaScriptの学習内容の一部を紹介')
         ul
           +each('JavaScriptList as list')
-            li.ml20
+            li.lh18.ml20
               a(href='{list.link}') {list.label}
 
 
