@@ -1,32 +1,9 @@
 <script>
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+  import Title from '../../components/items/Title.svelte';
+  import SubTitle from '../../components/items/SubTitle.svelte';
 
-	
-
-	let contentData = [
-		{
-			text: 'HTML,CSS',
-			description: 'トレースによるトレンドのレイアウトを学ぶ',
-			image1: '/html1.png',
-			image2: '/html3.png',
-			borderColor: 'orange',
-		},
-		{
-			text: 'JavaScript',
-			description: '基本から実践までを学ぶ',
-			image1: '/js1.png',
-			image2: '/js2.png',
-			borderColor: 'yellow',
-		},
-		{
-			text: 'Git (バージョン管理)',
-			description: '共同開発の方法を学ぶ',
-			image1: '/git1.png',
-			image2: '/git2.png',
-			borderColor: 'red',
-		},
-	];
 
 	
 </script>
@@ -37,8 +14,19 @@
 </svelte:head>
 <template lang='pug'>
 
-	div.w-full.text-center.mt100
-		div hoge
+  div.w-full.mt100.s-px16
+    div.container-1024
+      div.mb40.s-mb20
+        div.text-center.mb60.s-mb30
+          Title(title='スタンダードプランの詳細')
+        div.mb40
+          div.text-left.mb20.s-mb10
+            SubTitle(title='週2回の対面学習')
+          div.mb12
+            p.lh18 毎週、土、日曜日の朝9時から12時までの3時間。
+            p Gitの使い方に慣れてきたら、リモートによる学習も可能です。
+          img.block.object-fit-cover.rounded-10(src='/frame7.png')
+		
 
 
 </template>
