@@ -4,7 +4,7 @@
   import Title from '../../components/items/Title.svelte';
   import SubTitle from '../../components/items/SubTitle.svelte';
   
-
+  let title1 = 'HTML, CSS\nの学習内容の一部を紹介';
 	let listData = [ "HTML", "CSS", "JavaScript", "Git", "DB(データベース)", "SQL", "フレームワーク(sveltekit)", "Markdown" ];
   let htmlCssList = [
     { label: '要素1と要素2を横並びにしよう!' , link: 'https://training-nine-sigma.vercel.app/templates/flexbox/lesson1.html' },
@@ -59,18 +59,19 @@
           div.text-left.mb20.s-mb10
             SubTitle(title='チーム開発を意識')
           div.lh18 プログラミングを学ぶだけでなくGitのバージョン管理、プルリクエストの作成方法などを学びチーム開発の現場で役立つノウハウを学びます。
-          br|
+          br
+          |
     div.py40.mb100.s-mb50.bg-dark-green
       div.container-1024.mb40.s-mb20.s-px16
         div.text-center.text-white.mb60.s-mb30
-          Title(title='HTML, CSSの学習内容の一部を紹介')
+          Title(title='HTML, CSSの\n学習内容の一部を紹介')
         ul
           +each('htmlCssList as list')
             li.lh18.text-white.ml20
               a(href='{list.link}') {list.label}
     div.container-1024.mb40.s-mb20.s-px16
       div.text-center.mb60.s-mb30
-        Title(title='JavaScriptの学習内容の一部を紹介')
+        Title(title='JavaScriptの\n学習内容の一部を紹介')
       ul
         +each('JavaScriptList as list')
           li.lh18.ml20
