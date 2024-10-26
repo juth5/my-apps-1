@@ -19,11 +19,11 @@
 
 	let icons = [
 		{
-			icon: '/read.svg',
+			icon: '/book.svg',
 			link: '/curriculum',
 		},
 		{
-			icon: '/plan.svg',
+			icon: '/present.svg',
 			link: '/plan',
 		},
 		{
@@ -35,9 +35,10 @@
 
 <template lang='pug'>
 	header.fixed.t0.l0.z100.w-full.bg-black
-		div.f.fm.fbw.h80.px20.text-white.fs16.s-fs14
-			a(href='/')
-				img.h40.block.object-fit-contain(src='/pc_logo.png')
+		div.f.fm.fbw.h80.px20.text-white.fs16.s-h50.s-fs14
+			a.s-hide(href='/') プログラミング
+			a.s-show(href='/')
+				img.h30.block.object-fit-contain(src='/home.svg')
 			div.s-hide
 				+each('headerItems as item')
 					a.mr24.mr0-last(href='{item.link}') {item.label}

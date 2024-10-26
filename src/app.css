@@ -125,3 +125,7 @@ button:focus:not(:focus-visible) {
 .bg-base {
 	background-color: hsl(209, 36%, 86%);
 }
+
+.bg-light-green  {
+	background-color: #00b379;
+}

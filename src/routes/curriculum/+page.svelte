@@ -38,7 +38,7 @@
     div.container-1024
       div.mb40.s-mb20
         div.text-center.mb60.s-mb30
-          Title(title='スタンダートプランの特徴')
+          Title(title='カリキュラムについて')
         div.mb40
           div.text-left.mb20.s-mb10
             SubTitle(title='対面による学習')
