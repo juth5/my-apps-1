@@ -5,6 +5,8 @@
 	import Content from './Content.svelte';
 	import Title from '../components/items/Title.svelte';
 	import Plan from '../components/items/Plan.svelte';
+	import config from '$lib/scripts/config';
+	
 	
 
 	let contentData = [
@@ -46,6 +48,9 @@
 			h1.text-white
 				div.fs48.s-fs24 プログラミングを学ぼう
 				div.fs28.s-fs14 わかりやすく実践的なカリキュラム
+		div.z10.absolute.b100.l0.r0.f.fc
+			a.w300.inline-block.py14.rounded-full.bg-orange.text-center.border.text-white(href='{config.formUrl}', target='blank') お問い合わせ
+
 	div.w-full.text-center
 		div.mb50.s-mb40
 			Title(title='カリキュラム')
@@ -53,7 +58,8 @@
 			div.f.fc.mb50.s-mb50.s-px16
 				Content(item='{data}')
 		div.mb40
-			a.w300.inline-block.py14.bg-orange.rounded-full.text-white(href='/curriculum') 詳しく見る
+			a.w300.inline-block.py14.bg-light-green.rounded-full.text-white(href='/curriculum') 詳しく見る
+			
 		div.bg-dark-green.pb40.pt40.mb30
 			div.mb50.s-mb40
 				Title(title='プラン', color='white')
@@ -61,12 +67,12 @@
 				div.w500.s-px20
 					Plan
 			div
-				a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='/curriculum') 詳しく見る
+				a.w300.inline-block.py14.rounded-full.bg-light-green.border.text-white(href='/plan') 詳しく見る
 		div.mb80
 			div.mb50.s-mb40
 				Title(title='お問い合わせ')
-			div.s-px16.mb50 無料体験へのご参加お待ちしております。お気軽にご参加ください!
-			a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='/') 詳しく見る
+			div.s-px16.mb50 見学や無料体験も行っております。お気軽にご連絡ください。
+			a.w300.inline-block.py14.rounded-full.bg-orange.border.text-white(href='{config.formUrl}', target='blank') お問い合わせ
 
 
 </template>
