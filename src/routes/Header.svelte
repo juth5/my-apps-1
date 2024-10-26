@@ -2,6 +2,8 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+	import config from '$lib/scripts/config';
+	
 	let headerItems = [
 		{
 			label: 'カリキュラム',
@@ -13,7 +15,7 @@
 		},
 		{
 			label: 'お問い合わせ',
-			link: '/',
+			link: config.formUrl,
 		}
 	];
 
@@ -28,7 +30,7 @@
 		},
 		{
 			icon: '/mail.svg',
-			link: '/',
+			link: config.formUrl,
 		}
 	];
 </script>
@@ -41,10 +43,10 @@
 				img.h30.block.object-fit-contain(src='/home.svg')
 			div.s-hide
 				+each('headerItems as item')
-					a.mr24.mr0-last(href='{item.link}') {item.label}
+					a.mr24.mr0-last(href='{item.link}', target='blank') {item.label}
 			div.f.fm.s-show
 				+each('icons as icon')
-					a.mr24.mr0-last(href='{icon.link}')
+					a.mr24.mr0-last(href='{icon.link}', target='blank')
 						img.block.object-fit-contain.h30(src='{icon.icon}')
 </template>
 
