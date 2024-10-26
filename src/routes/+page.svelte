@@ -48,7 +48,7 @@
 			h1.text-white
 				div.fs48.s-fs24 プログラミングを学ぼう
 				div.fs28.s-fs14 わかりやすく実践的なカリキュラム
-		div.z10.absolute.b100.l0.r0.f.fc
+		div.z10.absolute.b100.l0.r0.f.fc.s-b40
 			a.w300.inline-block.py14.rounded-full.bg-orange.text-center.border.text-white(href='{config.formUrl}', target='blank') お問い合わせ
 
 	div.w-full.text-center
