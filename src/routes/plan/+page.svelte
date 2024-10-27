@@ -4,7 +4,17 @@
   import Title from '../../components/items/Title.svelte';
   import SubTitle from '../../components/items/SubTitle.svelte';
 
+  let sendFile = async (e) => {
+    let file = e.target.files[0];
+    let formData = new FormData();
+    formData.append('file', file);
 
+    const response = await fetch('/api/file', {
+      method: 'POST',
+      body: formData,  // ファイルをFormDataで送信
+    });
+  };
+  
 	
 </script>
 
@@ -26,7 +36,7 @@
             p.lh18 毎週、土、日曜日の朝9時から12時までの3時間。
             p Gitの使い方に慣れてきたら、リモートによる学習も可能です。
           img.block.object-fit-cover.rounded-10(src='/frame7.png')
-		
+      input.input(type='file', on:change!='{(e) => sendFile(e)}')
 
 
 </template>
