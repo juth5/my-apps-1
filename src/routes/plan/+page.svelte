@@ -3,8 +3,6 @@
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
   import Title from '../../components/items/Title.svelte';
   import SubTitle from '../../components/items/SubTitle.svelte';
-
-
 	
 </script>
 
@@ -26,8 +24,6 @@
             p.lh18 毎週、土、日曜日の朝9時から12時までの3時間。
             p Gitの使い方に慣れてきたら、リモートによる学習も可能です。
           img.block.object-fit-cover.rounded-10(src='/frame7.png')
-		
-
 
 </template>
 <style>
