@@ -10,7 +10,6 @@
       p.mr6 税込
       p.bold.fs28.lh10.mr6.s-fs20 50,000円
       p /月
-
     
 </template>
 

@@ -6,8 +6,7 @@
 	import Title from '../components/items/Title.svelte';
 	import Plan from '../components/items/Plan.svelte';
 	import config from '$lib/scripts/config';
-	
-	
+	import Skill from './Skill.svelte';
 
 	let contentData = [
 		{
@@ -30,6 +29,44 @@
 			image1: '/git1.png',
 			image2: '/git2.png',
 			borderColor: 'red',
+		},
+	];
+
+	let skillData = [
+		{
+			title: "HTML",
+			description: "トレースを中心に行います。(HTML,CSSは一通り学習済みの方はなるべく時間をかけない形で学習を進めます。)",
+			image: "/html.png",
+		},
+		{
+			title: "CSS",
+			description: "トレースを中心に行います。(HTML,CSSは一通り学習済みの方はなるべく時間をかけない形で学習を進めます。)",
+			image: "/css.png",
+		},
+		{
+			title: "JavaScript",
+			description: "基本的な構文からサイト制作で頻出する機能を学びます。入念な学習を行います。",
+			image: "/js.png",
+		},
+		{
+			title: "Git",
+			description: "共同開発を意識し、バージョン管理、プルリクエストの活用方法を学びます。",
+			image: "/git.png",
+		},
+		{
+			title: "Java",
+			description: "バックエンドの学習ではSpring Bootを使います。認証やDB操作を行います。",
+			image: "/java.png",
+		},
+		{
+			title: "SQL",
+			description: "基本的な構文を学び、実際にDB操作を行います。",
+			image: "/sql.png",
+		},
+		{
+			title: "API",
+			description: "APIを作成し、データ取得、更新作業などを経験します。",
+			image: "/api.png",
 		},
 	];
 
@@ -79,9 +116,11 @@
 		div.py50.bg-dark-green.text-white
 			div.mb50.s-mb40
 				Title(title='カリキュラム', color='white')
-			+each('contentData as data')
-				div.f.fc.mb50.s-mb50.s-px16
-					Content(item='{data}')
+			div.row.container-960
+				+each('skillData as data')
+					div.col6.mb50.s-mb30.s-px16.s-col12
+						Skill(item='{data}')
+						//- Content(item='{data}')
 			div
 				a.w300.inline-block.py14.bg-light-green.rounded-full.text-white(href='/curriculum') 詳しく見る
 				
