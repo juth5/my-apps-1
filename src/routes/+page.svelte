@@ -94,7 +94,7 @@
 		div.py50.s-px16
 			div.mb50.s-mb40
 				Title(title='サービスへの想い')
-			div.container-1024.text-left.mb20
+			div.container-960.text-left.mb20
 				p.text-center.bold.lh18.fs18.s-fs16 挫折しそうな人、挫折した人、諦めそうな人、新入社員、学生、プログラミング(IT)に興味がある人
 				p.text-center.mb18 が今よりもプログラミングができる！わかる！状態になるためのサービスです。
 				p 約3年前、私は教員からプログラマーへ転職しました。当初はURLの意味も、API、DB（データベース）、サーバーの基本概念すらわからない状態でした。
@@ -118,9 +118,8 @@
 				Title(title='カリキュラム', color='white')
 			div.row.container-960
 				+each('skillData as data')
-					div.col6.mb50.s-mb30.s-px16.s-col12
+					div.col6.mb50.s-mb30.s-px20.s-col12
 						Skill(item='{data}')
-						//- Content(item='{data}')
 			div
 				a.w300.inline-block.py14.bg-light-green.rounded-full.text-white(href='/curriculum') 詳しく見る
 				
