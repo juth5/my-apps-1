@@ -7,6 +7,10 @@
 	import Plan from '../components/items/Plan.svelte';
 	import config from '$lib/scripts/config';
 	import Skill from './Skill.svelte';
+	let isOpen = false;
+	let openServiceText = () => {
+		isOpen = true;
+	};
 
 	let contentData = [
 		{
@@ -74,7 +78,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>福岡でプログラミングを学ぼう</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 <template lang='pug'>
@@ -97,7 +101,10 @@
 			div.container-960.text-left.mb20
 				p.text-center.bold.lh18.fs18.s-fs16 挫折しそうな人、挫折した人、諦めそうな人、新入社員、学生、プログラミング(IT)に興味がある人
 				p.text-center.mb18 が今よりもプログラミングができる！わかる！状態になるためのサービスです。
-				p 約3年前、私は教員からプログラマーへ転職しました。当初はURLの意味も、API、DB（データベース）、サーバーの基本概念すらわからない状態でした。
+				+if('!isOpen')
+					div.f.fc
+						button.text-center.text-link(on:click!='{openServiceText}') 続きを読む
+				p(class="{isOpen ? 'h-full' : 'h0 overflow-hidden'}") 約3年前、私は教員からプログラマーへ転職しました。当初はURLの意味も、API、DB（データベース）、サーバーの基本概念すらわからない状態でした。
 					br
 					|さらに私は理解が遅く、Webプログラマーとして業務をこなせるようになるまでには非常に多くの時間を要しました。
 					br
