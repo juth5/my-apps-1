@@ -9,7 +9,7 @@
 </script>
 
 <template lang='pug'>
-	div.s100
+	div.s100.s-s80
 		img.object-fit-cover.s-full.rounded-10(src='{item}')
 </template>
 

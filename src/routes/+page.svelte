@@ -125,7 +125,7 @@
 				Title(title='カリキュラム', color='white')
 			div.row.container-960
 				+each('skillData as data')
-					div.col6.mb50.s-mb30.s-px20.s-col12
+					div.col6.mb60.s-mb40.s-px20.s-col12
 						Skill(item='{data}')
 			div
 				a.w300.inline-block.py14.bg-light-green.rounded-full.text-white(href='/curriculum') 詳しく見る
