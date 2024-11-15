@@ -103,7 +103,9 @@
 				//- p.text-center.mb18 が今よりもプログラミングができる！わかる！状態になるためのサービスです。
 				+if('!isOpen')
 					div.f.fc
-						button.text-center.text-link(on:click!='{openServiceText}') 続きを読む
+						button.f.fc.fm(on:click!='{openServiceText}')
+							div.text-center.text-link.mr8 続きを読む
+							img.object-fit-contain.block.s18(src='/arrow-down.svg')
 				p(class="{isOpen ? 'h-full' : 'h0 overflow-hidden'}") 約3年前、私は教員からプログラマーへ転職しました。当初はURLの意味も、API、DB（データベース）、サーバーの基本概念すらわからない状態でした。
 					br
 					|さらに私は理解が遅く、Webプログラマーとして業務をこなせるようになるまでには非常に多くの時間を要しました。
