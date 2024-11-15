@@ -12,8 +12,8 @@
 <template lang='pug'>
 	div.px40.s-px0
 		h4.fs20.s-mb12 {item.title}
-		div.f.fm.s-flex-column
-			div.mr28.s-mr0.s-mb20
+		div.f.fm
+			div.mr28.s-mr0.s-mr18.s-fs14
 				SkillImage(item='{item.image}')
 			div.text-left {item.description}
 
