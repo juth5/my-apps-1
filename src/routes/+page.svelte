@@ -8,6 +8,7 @@
 	import config from '$lib/scripts/config';
 	import Skill from './Skill.svelte';
 	let isOpen = false;
+	let ogpImage = '/top.png';
 	let openServiceText = () => {
 		isOpen = true;
 	};
@@ -79,7 +80,8 @@
 
 <svelte:head>
 	<title>福岡でプログラミングを学ぼう</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="プログラミングができるようになりたい人に、必要な知識と技術を教えます。" />
+	<meta property="og:image" content={ogpImage} />
 </svelte:head>
 <template lang='pug'>
 	div.relative.h80vh.s-h60vh
