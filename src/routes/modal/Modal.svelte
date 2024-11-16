@@ -2,14 +2,19 @@
   export let show = false;
   export let onClose = () => {};
   export let text = '';
+  $: {
+    show;
+    console.log(text)
+  }
+  
 </script>
 <template lang='pug'>
   +if('show')
-    div.modal-backdrop(on:click!='{onClose}')
+    div.modal-backdrop.f.fh(on:click!='{onClose}')
       div.modal-content(on:click|stopPropagation)
         slot
           div {text}
-        button(on:click!='{onClose}') 閉じる
+        button.mt40(on:click!='{onClose}') 閉じる
 </template>
 
 <style>

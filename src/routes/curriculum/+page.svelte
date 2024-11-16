@@ -8,6 +8,39 @@
   
   let title1 = 'HTML, CSS\nの学習内容の一部を紹介';
 	let listData = [ "HTML", "CSS", "JavaScript", "Git", "Java", "SQL", "API", "Markdown" ];
+
+
+  let newListData = [
+    {
+      title: "HTML、CSS",
+      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+    },
+    {
+      title: "JavaScript",
+      description: "jsの基本的な構文、Webサービスでよく使われる機能の作成、データの整形などで知識と技術を身につけます。また、	JavaScriptのフレームワークを使いサイト制作にも挑戦します。",
+    },
+    {
+      title: "Git",
+      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+    },
+    {
+      title: "Java",
+      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+    },
+    {
+      title: "SQL",
+      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+    },
+    {
+      title: "API",
+      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+    },
+    {
+      title: "Markdown",
+      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+    },
+
+  ];
   let htmlCssList = [
     { label: '要素1と要素2を横並びにしよう!' , link: 'https://training-nine-sigma.vercel.app/templates/flexbox/lesson1.html' },
     { label: '要素1と要素2と要素3を横並びにして、要素間のスペースを均等に配置しよう！' , link: 'https://training-nine-sigma.vercel.app/templates/flexbox/lesson3.html' },
@@ -28,10 +61,13 @@
     { label: 'jsで動く要素を作ってみよう!' , link: 'https://training-nine-sigma.vercel.app/templates/js/lesson36.html' },
   ];
 	let isOpenModal = false;
+  let hoge = null;
 
-  let openModal = () => {
+  let openModal = (list) => {
+    hoge = list;
     isOpenModal = true;
   };
+
 
   let closeModal = () => {
     isOpenModal = false;
@@ -65,10 +101,9 @@
             SubTitle(title='主な学習内容')
           div.lh18 
           ul 
-            +each('listData as list')
-              li.ml20 {list}
-        button.button(on:click='{openModal}') modal
-        Modal(show='{isOpenModal}', onClose='{closeModal}', text='aa')
+            +each('newListData as list')
+              li.ml20(on:click!='{() => openModal(list.description)}') {list.title}
+          Modal(show='{isOpenModal}', onClose='{closeModal}', text='{hoge}')
 
     //- div.py40.mb100.s-mb50.bg-dark-green
     //-   div.container-1024.mb40.s-mb20.s-px16
