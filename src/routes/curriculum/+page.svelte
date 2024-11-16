@@ -3,6 +3,8 @@
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
   import Title from '../../components/items/Title.svelte';
   import SubTitle from '../../components/items/SubTitle.svelte';
+  import Modal from '../modal/Modal.svelte';
+  
   
   let title1 = 'HTML, CSS\nの学習内容の一部を紹介';
 	let listData = [ "HTML", "CSS", "JavaScript", "Git", "Java", "SQL", "API", "Markdown" ];
@@ -25,7 +27,15 @@
     { label: 'Domを取得しよみよう!' , link: 'https://training-nine-sigma.vercel.app/templates/js/lesson26.html' },
     { label: 'jsで動く要素を作ってみよう!' , link: 'https://training-nine-sigma.vercel.app/templates/js/lesson36.html' },
   ];
-	
+	let isOpenModal = false;
+
+  let openModal = () => {
+    isOpenModal = true;
+  };
+
+  let closeModal = () => {
+    isOpenModal = false;
+  };
 </script>
 
 <svelte:head>
@@ -57,6 +67,8 @@
           ul 
             +each('listData as list')
               li.ml20 {list}
+        button.button(on:click='{openModal}') modal
+        Modal(show='{isOpenModal}', onClose='{closeModal}', text='aa')
 
     //- div.py40.mb100.s-mb50.bg-dark-green
     //-   div.container-1024.mb40.s-mb20.s-px16

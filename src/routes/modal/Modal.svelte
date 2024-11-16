@@ -1,12 +1,14 @@
 <script>
   export let show = false;
   export let onClose = () => {};
+  export let text = '';
 </script>
 <template lang='pug'>
   +if('show')
     div.modal-backdrop(on:click!='{onClose}')
       div.modal-content(on:click|stopPropagation)
         slot
+          div {text}
         button(on:click!='{onClose}') 閉じる
 </template>
 
