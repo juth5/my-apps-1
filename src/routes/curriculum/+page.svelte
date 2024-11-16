@@ -3,9 +3,44 @@
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
   import Title from '../../components/items/Title.svelte';
   import SubTitle from '../../components/items/SubTitle.svelte';
+  import Modal from '../modal/Modal.svelte';
+  
   
   let title1 = 'HTML, CSS\nの学習内容の一部を紹介';
-	let listData = [ "HTML", "CSS", "JavaScript", "Git", "DB(データベース)", "SQL", "フレームワーク(sveltekit)", "Markdown" ];
+	let listData = [ "HTML", "CSS", "JavaScript", "Git", "Java", "SQL", "API", "Markdown" ];
+
+
+  let newListData = [
+    {
+      title: "HTML、CSS",
+      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+    },
+    {
+      title: "JavaScript",
+      description: "jsの基本的な構文、Webサービスでよく使われる機能の作成、データの整形などで知識と技術を身につけます。また、	JavaScriptのフレームワークを使いサイト制作にも挑戦します。",
+    },
+    {
+      title: "Git",
+      description: "Gitの概念を学びます。ソースコードをgithubで管理し共同開発のためのブランチの概念、プルリクエストの作成、競合解決、マージについて一通り学びます。",
+    },
+    {
+      title: "Java",
+      description: "Javaでバックエンドについて学びます。Spring bootというフレームワークを使い、フロントエンドとサーバーサイドの関係、認証の仕組み、DB操作によるデータの書き込み、取得の基本を学びます。",
+    },
+    {
+      title: "SQL",
+      description: "Java、Spring bootを使いSQLを通してDB操作を行います。基本的な構文、テーブルのリレーションなどの基本について学びます。",
+    },
+    {
+      title: "API",
+      description: "APIによるデータのやり取りの基本を学びます。実際にAPIを作成しフロントから呼び出します。",
+    },
+    {
+      title: "Markdown",
+      description: "エンジニアがよく使うMarkdownに学びます。主に、プルリクエスト作成の時に使用します。",
+    },
+
+  ];
   let htmlCssList = [
     { label: '要素1と要素2を横並びにしよう!' , link: 'https://training-nine-sigma.vercel.app/templates/flexbox/lesson1.html' },
     { label: '要素1と要素2と要素3を横並びにして、要素間のスペースを均等に配置しよう！' , link: 'https://training-nine-sigma.vercel.app/templates/flexbox/lesson3.html' },
@@ -25,7 +60,18 @@
     { label: 'Domを取得しよみよう!' , link: 'https://training-nine-sigma.vercel.app/templates/js/lesson26.html' },
     { label: 'jsで動く要素を作ってみよう!' , link: 'https://training-nine-sigma.vercel.app/templates/js/lesson36.html' },
   ];
-	
+	let isOpenModal = false;
+  let hoge = null;
+
+  let openModal = (list) => {
+    hoge = list;
+    isOpenModal = true;
+  };
+
+
+  let closeModal = () => {
+    isOpenModal = false;
+  };
 </script>
 
 <svelte:head>
@@ -37,45 +83,50 @@
 	div.w-full.mt100
     div.container-1024.s-px16
       div.mb100.s-mb50
-        div.mb40.s-mb20
+        div.mb60.s-mb40
           div.text-center.mb60.s-mb30
-            Title(title='カリキュラムについて')
-          div.mb40
-            div.text-left.mb20.s-mb10
-              SubTitle(title='対面による学習')
-            div.mb12
-              p.lh18 福岡市内(博多、天神)のコワーキングスペースで学習を行います。
-              p つまずきの多い初学者の段階は対面の方が効率よく、テンポよく学習を進められると考えています。
-            img.block.object-fit-cover.rounded-10(src='/frame6.png')
-        div.mb40.s-mb20
-          div.text-left.mb20.s-mb10
-            SubTitle(title='実践的な学習プラン')
-          div.lh18 初学者の学習コストを最小限に抑え、最も効率的な方法で必要なスキルを身につけることを重視し学習内容を厳選しています。Web開発に必要な知識を習得し、早期に自学自走できる段階まで駆け抜けます。
-          div.mb20 Web開発に必要な以下の項目を学習します。
-          ul 
-            +each('listData as list')
-              li.ml20 {list}
+            Title(title='カリキュラムの特徴')
+        div.mb60.s-mb40
+          div.text-left.mb10
+            SubTitle(title='身につける能力')
+            div 本サービスは、Web開発に必要な知識と技術の基本を総合的に身につけ、自学で成長できる基礎を築くことを目標としています。
+            div 開発することをベースとしてフロントエンドについて、バックエンドについて、データベースなどについて理解することでなぜサービスが動いているのかについて感覚的に理解します。
+            div それぞれが基本段階ではあっても、総合的に理解することで発展的に考える力が身につくと考えているからです。
+        div.mb60.s-mb40
+          div.text-left.mb10
+            SubTitle(title='主な学習内容')
+          div.lh18 
+          ul
+            +each('newListData as list')
+              li.ml20.mb8
+                div.inline-block.cursor-pointer.text-link(on:click!='{() => openModal(list.description)}') {list.title}
+          Modal(show='{isOpenModal}', onClose='{closeModal}', text='{hoge}')
+        div.mb60.s-mb40
+          div.text-left.mb10
+            SubTitle(title='つまずきを素早く解決する')
+          div.mb12
+            p.lh18 福岡市内(博多、天神)のコワーキングスペースで学習を行います。
+          img.block.object-fit-cover.rounded-10(src='/frame6.png')
         div
-          div.text-left.mb20.s-mb10
-            SubTitle(title='チーム開発を意識')
-          div.lh18 プログラミングを学ぶだけでなくGitのバージョン管理、プルリクエストの作成方法などを学びチーム開発の現場で役立つノウハウを学びます。
-          br
-          |
-    div.py40.mb100.s-mb50.bg-dark-green
-      div.container-1024.mb40.s-mb20.s-px16
-        div.text-center.text-white.mb60.s-mb30
-          Title(title='HTML, CSSの\n学習内容の一部を紹介')
-        ul
-          +each('htmlCssList as list')
-            li.lh18.text-white.ml20
-              a(href='{list.link}') {list.label}
-    div.container-1024.mb40.s-mb20.s-px16
-      div.text-center.mb60.s-mb30
-        Title(title='JavaScriptの\n学習内容の一部を紹介')
-      ul
-        +each('JavaScriptList as list')
-          li.lh18.ml20
-            a(href='{list.link}') {list.label}
+          div.text-left.mb10
+            SubTitle(title='チーム開発を意識する')
+          div.lh18 プログラミングを学ぶだけでなくGitのバージョン管理、プルリクエストの作成方法などチーム開発の現場で役立つノウハウを学びます。
+
+    //- div.py40.mb100.s-mb50.bg-dark-green
+    //-   div.container-1024.mb40.s-mb20.s-px16
+    //-     div.text-center.text-white.mb60.s-mb30
+    //-       Title(title='HTML, CSSの\n学習内容の一部を紹介')
+    //-     ul
+    //-       +each('htmlCssList as list')
+    //-         li.lh18.text-white.ml20
+    //-           a(href='{list.link}') {list.label}
+    //- div.container-1024.mb40.s-mb20.s-px16
+    //-   div.text-center.mb60.s-mb30
+    //-     Title(title='JavaScriptの\n学習内容の一部を紹介')
+    //-   ul
+    //-     +each('JavaScriptList as list')
+    //-       li.lh18.ml20
+    //-         a(href='{list.link}') {list.label}
 
 
 
