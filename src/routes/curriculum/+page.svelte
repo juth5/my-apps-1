@@ -21,23 +21,23 @@
     },
     {
       title: "Git",
-      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+      description: "Gitの概念を学びます。ソースコードをgithubで管理し共同開発のためのブランチの概念、プルリクエストの作成、競合解決、マージについて一通り学びます。",
     },
     {
       title: "Java",
-      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+      description: "Javaでバックエンドについて学びます。Spring bootというフレームワークを使い、フロントエンドとサーバーサイドの関係、認証の仕組み、DB操作によるデータの書き込み、取得の基本を学びます。",
     },
     {
       title: "SQL",
-      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+      description: "Java、Spring bootを使いSQLを通してDB操作を行います。基本的な構文、テーブルのリレーションなどの基本について学びます。",
     },
     {
       title: "API",
-      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+      description: "APIによるデータのやり取りの基本を学びます。実際にAPIを作成しフロントから呼び出します。",
     },
     {
       title: "Markdown",
-      description: "Web制作でよく使われるタグの使い方、formタグの書き方、Flexbox、positionなどの基本を学びます。感覚的に書けようになるように、既存サイトのトレースを複数回行います。",
+      description: "エンジニアがよく使うMarkdownに学びます。主に、プルリクエスト作成の時に使用します。",
     },
 
   ];
@@ -86,24 +86,25 @@
         div.mb60.s-mb40
           div.text-center.mb60.s-mb30
             Title(title='カリキュラムの特徴')
-          div.mb40
-            div.text-left.mb10
-              SubTitle(title='つまずきを素早く解決')
-            div.mb12
-              p.lh18 福岡市内(博多、天神)のコワーキングスペースで学習を行います。
-            img.block.object-fit-cover.rounded-10(src='/frame6.png')
         div.mb60.s-mb40
-          div.text-left.mb10
-            SubTitle(title='チーム開発を意識')
-          div.lh18 プログラミングを学ぶだけでなくGitのバージョン管理、プルリクエストの作成方法などチーム開発の現場で役立つノウハウを学びます。
-        div
           div.text-left.mb10
             SubTitle(title='主な学習内容')
           div.lh18 
-          ul 
+          ul
             +each('newListData as list')
-              li.ml20(on:click!='{() => openModal(list.description)}') {list.title}
+              li.ml20.mb8
+                div.inline-block.cursor-pointer.text-link(on:click!='{() => openModal(list.description)}') {list.title}
           Modal(show='{isOpenModal}', onClose='{closeModal}', text='{hoge}')
+        div.mb60.s-mb40
+          div.text-left.mb10
+            SubTitle(title='つまずきを素早く解決')
+          div.mb12
+            p.lh18 福岡市内(博多、天神)のコワーキングスペースで学習を行います。
+          img.block.object-fit-cover.rounded-10(src='/frame6.png')
+        div
+          div.text-left.mb10
+            SubTitle(title='チーム開発を意識')
+          div.lh18 プログラミングを学ぶだけでなくGitのバージョン管理、プルリクエストの作成方法などチーム開発の現場で役立つノウハウを学びます。
 
     //- div.py40.mb100.s-mb50.bg-dark-green
     //-   div.container-1024.mb40.s-mb20.s-px16
