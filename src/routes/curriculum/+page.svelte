@@ -88,6 +88,12 @@
             Title(title='カリキュラムの特徴')
         div.mb60.s-mb40
           div.text-left.mb10
+            SubTitle(title='身につける能力')
+            div 本サービスは、Web開発に必要な知識と技術の基本を総合的に身につけ、自学で成長できる基礎を築くことを目標としています。
+            div 開発することをベースとしてフロントエンドについて、バックエンドについて、データベースなどについて理解することでなぜサービスが動いているのかについて感覚的に理解します。
+            div それぞれが基本段階ではあっても、総合的に理解することで発展的に考える力が身につくと考えているからです。
+        div.mb60.s-mb40
+          div.text-left.mb10
             SubTitle(title='主な学習内容')
           div.lh18 
           ul
@@ -97,13 +103,13 @@
           Modal(show='{isOpenModal}', onClose='{closeModal}', text='{hoge}')
         div.mb60.s-mb40
           div.text-left.mb10
-            SubTitle(title='つまずきを素早く解決')
+            SubTitle(title='つまずきを素早く解決する')
           div.mb12
             p.lh18 福岡市内(博多、天神)のコワーキングスペースで学習を行います。
           img.block.object-fit-cover.rounded-10(src='/frame6.png')
         div
           div.text-left.mb10
-            SubTitle(title='チーム開発を意識')
+            SubTitle(title='チーム開発を意識する')
           div.lh18 プログラミングを学ぶだけでなくGitのバージョン管理、プルリクエストの作成方法などチーム開発の現場で役立つノウハウを学びます。
 
     //- div.py40.mb100.s-mb50.bg-dark-green
