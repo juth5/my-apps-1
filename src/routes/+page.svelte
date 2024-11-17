@@ -76,9 +76,9 @@
 
 		div.py50.s-px16
 			div.mb50.s-mb40
-				Title(title='サービスへの想い')
+				Title(title='サービスの想い')
 			div.container-960.text-left.mb20
-				p.text-center.bold.lh18.fs22.mb18.s-fs16 プログラミングが難しいと感じている人のために
+				p.text-center.bold.lh18.fs22.mb18.s-fs16 プログラミングに興味がある人へ
 				//- p.text-center.mb18 が今よりもプログラミングができる！わかる！状態になるためのサービスです。
 				+if('!isOpen')
 					div.f.fc
