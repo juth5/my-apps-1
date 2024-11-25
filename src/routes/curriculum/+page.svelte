@@ -37,7 +37,7 @@
     },
     {
       title: "Markdown",
-      description: "エンジニアがよく使うMarkdownに学びます。主に、プルリクエスト作成の時に使用します。",
+      description: "エンジニアがよく使うMarkdownについて学びます。主に、プルリクエスト作成の時に使用します。",
     },
 
   ];
@@ -97,10 +97,41 @@
             SubTitle(title='主な学習内容')
           div.lh18 
           ul
-            +each('newListData as list')
+            +each('newListData as list, index')
               li.ml20.mb8
                 div.inline-block.cursor-pointer.text-link(on:click!='{() => openModal(list.description)}') {list.title}
           Modal(show='{isOpenModal}', onClose='{closeModal}', text='{hoge}')
+        div.mb60.s-mb40
+          div.text-left.mb10
+            SubTitle(title='学習進捗のイメージ')
+          div.mb12
+            div
+              p.lh18.inline.bg-light-yellow 1週間目 開発環境のセットアップとHTML,CSSの基礎を学ぶ
+            
+            div
+              p.lh18.inline.bg-light-yellow 2週間目 HTML,CSSの基礎を学ぶ
+            div
+              p.lh18.inline.bg-light-yellow 3週間目 トレースを行う
+            div
+              p.lh18.inline.bg-light-yellow 4週間目 JavaScriptの基礎を学ぶ
+            div 
+              p.lh18.inline.bg-light-green 5週間目 JavaScriptの基礎を学ぶ、問題を解く
+            div 
+              p.lh18.inline.bg-light-green 6週間目 JavaScriptでよくある機能を開発する
+            div 
+              p.lh18.inline.bg-light-green 7週間目 Spring bootでMPA（マルチページアプリケーション）の仕組みを学ぶ。
+            div 
+              p.lh18.inline.bg-light-green 8週間目 DB操作を行い、TODOリストを作る
+            div 
+              p.lh18.bg-light-red.inline 9週間目 Spring securityで認証機能を実装する
+            div 
+              p.lh18.bg-light-red.inline 10週間目 JavaScriptのフレームワークSvelteでSPA（シングルページアプリケーション）の仕組みを学ぶ。
+            div 
+              p.lh18.bg-light-red.inline 11週間目 FireStore（DB）を操作する、APIについて学ぶ
+            div 
+              p.lh18.bg-light-red.inline 12週間目 FirebaseAuthで認証機能を実装する
+            div 
+              p.lh18.bg-light-red.inline 13週間目 ログイン機能とDB操作で日誌アプリを作成する
         div.mb60.s-mb40
           div.text-left.mb10
             SubTitle(title='つまずきを素早く解決する')

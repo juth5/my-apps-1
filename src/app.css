@@ -134,3 +134,15 @@ button:focus:not(:focus-visible) {
 .text-link {
 	color: #007bff;
 }
+
+.bg-light-yellow {
+	background-color: #FFF5A6;
+}
+
+.bg-light-green {
+	background-color: #BFF566;
+}
+
+.bg-light-red {
+	background-color: #FF6969;
+}

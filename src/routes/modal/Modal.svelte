@@ -4,7 +4,6 @@
   export let text = '';
   $: {
     show;
-    console.log(text)
   }
   
 </script>
